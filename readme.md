@@ -1,5 +1,7 @@
 # Laravel Single Page Application Starter Kit
 
+![Cover](http://spa.riskihajar.xyz/img/cover.png)
+
 > Single Page Application starter kit built on top of Vue.js and Laravel.
 
 This package inspired by this repo [https://github.com/codecasts/spa-starter-kit](https://github.com/codecasts/spa-starter-kit).
