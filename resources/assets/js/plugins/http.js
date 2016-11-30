@@ -22,7 +22,7 @@ http.interceptors.response.use(
             store.dispatch('setToken', '')
             store.dispatch('setUser', {})
 
-            error.response.data.messages.push('Session Timeoutm, Please Login')
+            error.response.data.messages.push('Session Timeout, Please Login')
         }else if(error.response.data.reason === 'token'){
             router.push({name: 'login.index'})
         }

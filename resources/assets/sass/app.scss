@@ -5,7 +5,8 @@
 /* Icon Fonts */
 @import "node_modules/material-design-iconic-font/scss/material-design-iconic-font";
 
-@import "node_modules/element-ui/lib/theme-default/index";
+/* Element UI */
+@import "./element-theme";
 
 // Variables
 @import "variables";
