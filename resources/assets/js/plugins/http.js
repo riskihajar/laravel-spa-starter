@@ -16,18 +16,11 @@ export function setToken(token) {
 http.interceptors.response.use(
     response => response,
     (error) => {
-        if(error.response.data.error === 'token_expired' || error.response.data.error === 'token_not_provided'){
+        if(['token_expired', 'token_not_provided', 'token_invalid'].indexOf(error.response.data.error) !== -1){
             router.push({name: 'login.index'})
-
-            store.dispatch('setToken', '')
-            store.dispatch('setUser', {})
-
-            error.response.data.messages.push('Session Timeout, Please Login')
-        }else if(error.response.data.reason === 'token'){
-            router.push({name: 'login.index'})
+            store.dispatch('setMessage', {type: 'error', message: ['Session timeout, Please Login']})
         }
 
-        store.dispatch('setMessage', {type: 'error', message: error.response.data.messages})
         store.dispatch('setFetching', {fetching: false})
         return Promise.reject(error)
     }

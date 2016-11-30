@@ -1,5 +1,5 @@
 <template>
-    <el-row type="flex" justify="center" align="middle" v-loading.body="loading">
+    <el-row type="flex" justify="center" align="middle">
         <el-col :lg="6" class="login-container">
             <el-card class="box-card">
                 <header slot="header">
