@@ -50,7 +50,7 @@ Make sure you have installed **Node** and [**Yarn**](https://yarnpkg.com/) (late
 1. Client side
 	* Your application will be available on **http://localhost:8000**
 2. Server side
-	* API endpoint is http://**localhost:8000/api**
+	* API endpoint is **http://localhost:8000/api**
 
 ## Things worth mentioning
 
@@ -64,8 +64,8 @@ Make sure you have installed **Node** and [**Yarn**](https://yarnpkg.com/) (late
 
 ## Credits
 
-[Fábio Vedovelli](https://github.com/vedovelli)
-[Codecast's](https://github.com/codecasts/spa-starter-kit)
+* [Fábio Vedovelli](https://github.com/vedovelli)
+* [Codecast's](https://github.com/codecasts/spa-starter-kit)
 
 ## License
 
