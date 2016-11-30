@@ -30,10 +30,12 @@ export default{
         }
     },
     methods: {
-        ...mapActions(['setToken', 'setUser', 'setMessage']),
+        ...mapActions(['setToken', 'setUser', 'setMessage', 'setFetching']),
         submit(){
+            this.setFetching({fetching: true})
             this.$http.post('login', this.credentials).then((response) => {
                 this.handleResponse(response)
+                this.setFetching({fetching: false})
             })
         },
         handleResponse(response){
