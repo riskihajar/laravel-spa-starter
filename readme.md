@@ -1,0 +1,72 @@
+# Laravel Single Page Application Starter Kit
+
+> Single Page Application starter kit built on top of Vue.js and Laravel.
+
+This package inspired by this repo [https://github.com/codecasts/spa-starter-kit](https://github.com/codecasts/spa-starter-kit).
+Using Laravel 5.3 project resources workspace as structure.
+
+They're not just freshly created projects but a fully working application that can be modified and expanded to become your own application.
+
+## Demo
+
+The live demo can be found in [https://spa.riskihajar.xyz/](https://spa.riskihajar.xyz/).
+
+## Features
+
+1. Client side
+    * Vue.js 2.0 project create with vue-cli + webpack template
+    * Centralized state management with Vuex
+    * Route management with Vue-router
+    * Authentication with JWT
+    * Keep user signed in using local stored info
+    * HTTP requests with [Axios](https://github.com/mzabriskie/axios)
+    * ESLint
+    * Component using [ElementUI](http://element.eleme.io/)
+2. Server side
+    * Laravel 5.3
+    * Authentication with JWT
+
+## Prerequisites
+
+Make sure you have installed **Node** and [**Yarn**](https://yarnpkg.com/) (latest versions) as well as **PHP 7** and **MySQL**.
+
+## Installation
+
+1. Client side - this is a Vue.js project created with vue-cli
+	* With Terminal `yarn && gulp`.
+2. Server side - this is a Laravel 5.3 project
+	* With Terminal:
+        * Navigate to **project** folder and then:
+        * `composer install` to install Laravel and third party packages
+        * `touch database/database.sqlite` to create an empty database file
+        * `cp .env.example .env` to configure installation
+        * `php artisan key:generate` to generate unique key for the project
+        * `php artisan migrate` to create all the tables
+        * `php artisan db:seed` to fill the tables with fake data
+        * `php artisan serve` to serve application on localhost:8000
+
+## Usage
+
+1. Client side
+	* Your application will be available on **http://localhost:8000**
+2. Server side
+	* API endpoint is http://**localhost:8000/api**
+
+## Things worth mentioning
+
+1. Error handling is done globally by making use of Axios' interceptors. But you can still .catch() errors within components to perform actions related to that scope. See /client/src/plugins/http.js;
+
+2. The same way error messages lives in one single component (/resources/assets/js/modules/_commons/alerts.vue) and their visibility is controlled by a Vuex property. So to show/hide messages it is just a matter of dispaching a Vuex action from within any component;
+
+3. The spinner displayed during server requests (see top right close to user indentification) is also controlled by a Vuex property. The procedure to show/hide it is the same as outlined in the item 2 above;
+
+4. routes and Vuex modules live close to the modules they work for. Always look for routes.js and store.js inside a module directory. See /resources/assets/js/modules/categories.
+
+## Credits
+
+[Fábio Vedovelli](https://github.com/vedovelli)
+[Codecast's](https://github.com/codecasts/spa-starter-kit)
+
+## License
+
+Licensed under the MIT license.

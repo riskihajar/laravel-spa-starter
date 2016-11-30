@@ -1,0 +1,27 @@
+.el-menu.sm-menu{
+    border-radius: 0;
+    color: #fff;
+
+    .menu-title{
+
+    }
+
+    .zmdi{
+        margin-right: 10px;
+    }
+
+    &.sm-menu-right{
+        .el-submenu__icon-arrow{
+            display: none;
+        }
+
+        & > .el-submenu, & > .el-menu-item{
+            float: right;
+
+            .el-menu{
+                right: 5px;
+                left: auto;
+            }
+        }
+    }
+}

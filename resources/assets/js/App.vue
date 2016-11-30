@@ -1,0 +1,36 @@
+<template>
+    <div id="app" :class="{'login-wrapper': isLoginPage}">
+        <navigation v-show="!isLoginPage"></navigation>
+        <div class="container">
+            <transition>
+                <router-view></router-view>
+            </transition>
+        </div>
+        <spinner></spinner>
+    </div>
+</template>
+
+<script>
+import navigation from './modules/_commons/navbar.vue'
+import spinner from './modules/_commons/spinner.vue'
+
+export default{
+    name: 'LaravelSPA',
+    components: {navigation, spinner},
+    computed: {
+        isLoginPage(){
+            return this.$route.name === 'login.index'
+        }
+    }
+}
+</script>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active{
+    transition: opacity .5s ease;
+}
+
+.fade-enter, .fade-leave-active{
+    opacity: 0;
+}
+</style>

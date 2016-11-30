@@ -1,0 +1,6 @@
+export const MAIN_SET_TOKEN = 'MAIN_SET_TOKEN';
+export const MAIN_SET_USER = 'MAIN_SET_USER';
+export const MAIN_SET_MESSAGE = 'MAIN_SET_MESSAGE';
+export const MAIN_SET_FETCHING = 'MAIN_SET_FETCHING';
+
+export const CATEGORY_SET_DATA = 'SEKTOR_SET_DATA';
