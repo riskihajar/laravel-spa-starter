@@ -35,7 +35,7 @@ Make sure you have installed **Node** and [**Yarn**](https://yarnpkg.com/) (late
 ## Installation
 
 1. Client side - this is a Vue.js project created with vue-cli
-	* With Terminal `yarn && gulp`.
+	* With Terminal `yarn && yarn dev`.
 2. Server side - this is a Laravel 5.3 project
 	* With Terminal:
         * Navigate to **project** folder and then:
