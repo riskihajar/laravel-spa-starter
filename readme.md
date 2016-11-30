@@ -9,7 +9,7 @@ They're not just freshly created projects but a fully working application that c
 
 ## Demo
 
-The live demo can be found in [https://spa.riskihajar.xyz/](https://spa.riskihajar.xyz/).
+The live demo can be found in [http://spa.riskihajar.xyz/](http://spa.riskihajar.xyz/).
 
 ## Features
 
