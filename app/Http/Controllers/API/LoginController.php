@@ -23,4 +23,11 @@ class LoginController extends Controller
 
         return response()->json(compact('token', 'user'));
     }
+
+    public function profile()
+    {
+        $user = Auth::user();
+
+        return response()->json(compact('user'));
+    }
 }

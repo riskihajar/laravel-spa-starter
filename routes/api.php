@@ -19,8 +19,6 @@ Route::group(['middleware' => 'api', 'namespace' => 'API'], function(){
     Route::group(['middleware' => 'jwt.auth'], function(){
         Route::resource('category', 'CategoryController');
 
-        Route::get('profile', function(){
-            return auth()->user();
-        });
+        Route::get('profile', 'LoginController@profile');
     });
 });
