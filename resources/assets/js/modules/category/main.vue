@@ -11,7 +11,7 @@
                 </el-col>
             </el-row>
             <el-row type="flex" justify="center">
-                <el-col :span="8">
+                <el-col :md="8" :xs="24">
                     <transition name="fade">
                         <router-view></router-view>
                     </transition>

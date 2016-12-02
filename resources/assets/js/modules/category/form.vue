@@ -1,5 +1,5 @@
 <template>
-    <el-form label-width="120px">
+    <el-form>
         <el-form-item label="Category Name">
             <el-input v-model="category.name"></el-input>
         </el-form-item>
