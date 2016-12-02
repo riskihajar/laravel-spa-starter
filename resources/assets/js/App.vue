@@ -7,6 +7,10 @@
             </transition>
         </div>
         <spinner></spinner>
+
+        <footer>
+            <a href="https://github.com/riskihajar/laravel-spa-starter"><icon i="github" type="mdi"></icon> github</a>
+        </footer>
     </div>
 </template>
 
@@ -14,10 +18,11 @@
 import {mapActions} from 'vuex'
 import navigation from './modules/_commons/navbar.vue'
 import spinner from './modules/_commons/spinner.vue'
+import icon from './modules/_commons/icon.vue'
 
 export default{
     name: 'LaravelSPA',
-    components: {navigation, spinner},
+    components: {navigation, spinner, icon},
     computed: {
         isLoginPage(){
             return this.$route.name === 'login.index'

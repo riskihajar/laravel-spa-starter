@@ -32,6 +32,20 @@ body{
     background-size: cover;*/
 }
 
+footer{
+    padding: 20px;
+    text-align: center;
+
+    a{
+        color: #111;
+        text-decoration: none;
+        transition: color .5 ease;
+        &:hover{
+            color: #333;
+        }
+    }
+}
+
 @import "components/header";
 @import "components/navbar";
 @import "components/input";
