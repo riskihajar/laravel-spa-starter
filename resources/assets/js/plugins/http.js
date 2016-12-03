@@ -19,6 +19,8 @@ http.interceptors.response.use(
         if(['token_expired', 'token_not_provided', 'token_invalid'].indexOf(error.response.data.error) !== -1){
             router.push({name: 'login.index'})
             store.dispatch('setMessage', {type: 'error', message: ['Session timeout, Please Login']})
+        }else{
+            store.dispatch('setMessage', {type: 'error', message: error.response.data.messages})
         }
 
         store.dispatch('setFetching', {fetching: false})
